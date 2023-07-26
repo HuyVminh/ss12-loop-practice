@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let count = 0;
+        let a = +prompt("Hãy nhập số lượng số nguyên tố mà bạn muốn tìm:");
+        let check = true;
+        for (i = 2; count < a; i++) {
+            for (j = 2; j <= (i / 2); j++) {
+                if (i % j == 0) {
+                    check = false;
+                    break;
+                }
+            }
+            if (check == true) {
+                console.log(i);
+                count = count + 1;
+            }
+            check = true;
+        }
+    </script>
+</body>
+
+</html>
